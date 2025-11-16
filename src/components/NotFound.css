@@ -1,0 +1,231 @@
+/* src/components/NotFound.css */
+
+.not-found-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+  background-image: url('/forest_bg_dark.jpg'), linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding: 40px 20px;
+}
+
+.fog-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(181, 167, 197, 0.1) 0%, transparent 70%);
+  animation: fogMove 15s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes fogMove {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateX(-20px) translateY(-10px);
+    opacity: 0.5;
+  }
+}
+
+.not-found-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 600px;
+  padding: 40px;
+  background-color: rgba(18, 18, 18, 0.85);
+  border-radius: 20px;
+  border: 2px solid rgba(181, 167, 197, 0.3);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(181, 167, 197, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.error-number {
+  font-size: 8em;
+  font-weight: bold;
+  background: linear-gradient(135deg, #B5A7C5 0%, #E2BFFF 50%, #B5A7C5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+  text-shadow: 0 0 30px rgba(181, 167, 197, 0.5);
+  animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.error-title {
+  font-size: 2.5em;
+  color: #E2BFFF;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(226, 191, 255, 0.5);
+}
+
+.error-message {
+  font-size: 1.2em;
+  color: #D3D3D3;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.error-quote {
+  margin: 30px 0;
+  padding: 20px;
+  border-left: 3px solid #B5A7C5;
+  background-color: rgba(181, 167, 197, 0.1);
+  border-radius: 5px;
+}
+
+.error-quote p {
+  color: #B5A7C5;
+  font-size: 1.1em;
+  font-style: italic;
+  margin: 0;
+}
+
+.navigation-links {
+  margin-top: 40px;
+}
+
+.nav-button {
+  display: inline-block;
+  padding: 15px 35px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin: 10px;
+  border: 2px solid;
+}
+
+.home-button {
+  background-color: transparent;
+  color: #B5A7C5;
+  border-color: #B5A7C5;
+}
+
+.home-button:hover {
+  background-color: #B5A7C5;
+  color: #121212;
+  box-shadow: 0 0 20px rgba(181, 167, 197, 0.6);
+  transform: translateY(-2px);
+}
+
+.quick-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.quick-link {
+  padding: 10px 20px;
+  color: #D3D3D3;
+  text-decoration: none;
+  border: 1px solid rgba(181, 167, 197, 0.3);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 0.95em;
+}
+
+.quick-link:hover {
+  background-color: rgba(181, 167, 197, 0.2);
+  border-color: #B5A7C5;
+  color: #E2BFFF;
+  transform: translateY(-2px);
+}
+
+.moon-glow {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(226, 191, 255, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: moonPulse 4s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes moonPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .error-number {
+    font-size: 5em;
+  }
+  
+  .error-title {
+    font-size: 1.8em;
+  }
+  
+  .error-message {
+    font-size: 1em;
+  }
+  
+  .not-found-content {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+  
+  .nav-button {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+  
+  .quick-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .quick-link {
+    width: 200px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-number {
+    font-size: 4em;
+  }
+  
+  .error-title {
+    font-size: 1.5em;
+  }
+  
+  .not-found-content {
+    padding: 25px 15px;
+  }
+}
+

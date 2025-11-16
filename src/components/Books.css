@@ -105,3 +105,22 @@
 .book-button:hover {
   background-color: #C0A0E0;
 }
+
+/* Exemplo para o final de src/components/Books.css. Repita em Music.css e Reflections.css */
+
+@media (max-width: 600px) {
+    .books-container {
+        padding: 10px;
+        margin: 20px auto;
+    }
+    .details-grid {
+        flex-direction: column; /* Empilha os cartões de detalhe */
+        gap: 15px;
+    }
+    .author-section {
+        padding: 20px;
+    }
+    h2 {
+        font-size: 2em !important;
+    }
+}

@@ -74,3 +74,22 @@
 .nav-highlight:hover {
   color: white !important;
 }
+/* Adicione no final de src/components/Header.css */
+
+@media (max-width: 768px) {
+    .ForksHeader {
+        flex-direction: column; /* Empilha logo e nav */
+        padding: 15px 15px 5px 15px;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    .main-nav {
+        gap: 15px; /* Reduz o espaçamento */
+        flex-wrap: wrap; /* Permite quebrar a linha, se necessário */
+        justify-content: center;
+    }
+    .nav-link {
+        font-size: 0.9em;
+    }
+}

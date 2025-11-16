@@ -8,6 +8,7 @@ import Home from './components/Home';
 import Books from './components/Books';
 import Music from './components/Music';
 import Reflections from './components/Reflections';
+import NotFound from './components/NotFound';
 
 // Importe seu CSS global, se houver (Ex: para definir a fonte ou cor de fundo do body)
 import './App.css'; 
@@ -39,13 +40,7 @@ function App() {
           <Route path="/reflections" element={<Reflections />} />
           
           {/* Rota 404 para qualquer URL que não corresponda às anteriores */}
-          <Route path="*" element={
-            <div style={{ color: 'white', textAlign: 'center', marginTop: '100px', backgroundColor: '#121212', minHeight: '100vh', paddingTop: '50px' }}>
-              <h2>404 | Você se perdeu na névoa de Forks...</h2>
-              <p>Volte para o caminho seguro.</p>
-              {/* Você pode adicionar um link para <Link to="/">Home</Link> aqui, se quiser */}
-            </div>
-          } />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
     </Router>

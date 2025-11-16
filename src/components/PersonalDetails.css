@@ -1,0 +1,82 @@
+/* src/components/PersonalDetails.css */
+
+.personal-details-card {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: var(--color-forest-gray, #2F4F4F); /* Fundo da Floresta */
+  border: 2px solid var(--color-lavender-accent, #B5A7C5); /* Borda Roxo/Lavanda */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  color: white;
+  text-align: center;
+}
+
+.personal-details-card h3 {
+  color: var(--color-pink-accent, #E2BFFF);
+  font-size: 1.8em;
+  margin-bottom: 25px;
+}
+
+.details-grid-small {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  flex: 1;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #333649; /* Roxo/Azul Suave */
+}
+
+.detail-item h4 {
+  font-size: 0.9em;
+  color: #D3D3D3;
+  margin-bottom: 5px;
+}
+
+.detail-item p {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Cores Mencionadas */
+.color-swatch-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+.color-swatch {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.purple-swatch {
+  background-color: #800080; /* Roxo */
+}
+.brown-swatch {
+  background-color: #5C4033; /* Marrom */
+}
+
+/* Destaque Simon Lewis */
+.highlight-simon {
+  color: #FFD700; /* Dourado (referência Shadowhunters) */
+}
+
+.note-identity {
+  margin-top: 15px;
+  font-style: italic;
+  color: #aaa;
+}
+
+/* Otimização Mobile */
+@media (max-width: 600px) {
+    .details-grid-small {
+        flex-direction: column; /* Empilha os detalhes no celular */
+    }
+}

@@ -5,13 +5,28 @@ import './Music.css';
 const Music = () => {
   return (
     <div className="music-container">
-      <h2>🎸 A Playlist de Forks: Rock dos Imortais 🧛</h2>
+      <h2>🎸 A Playlist de Forks: Rock dos Imortais e Poesia 🤍</h2>
       
       <p className="music-intro">
-        Do glamour do estádio de Wembley à melancolia de Sheffield: a trilha sonora perfeita para uma noite chuvosa.
+        Do glamour do estádio de Wembley à melancolia de Sheffield e ao conforto lírico de *evermore*: a trilha sonora completa.
       </p>
 
-      {/* Seção Queen (Anos 80) */}
+      {/* Seção Taylor Swift (NOVA) */}
+      <div className="band-section taylor-section">
+        <h3>💖 Taylor Swift: Glitter, Pop e Autoaceitação (Lover Era)</h3>
+        <p>A celebração da autoexpressão, do brilho e da alegria. Perfeito para se sentir poderosa!</p>
+        <div className="song-list">
+          {/* Músicas de álbuns mais alegres/celebratórios */}
+          {['Lover', 'Cruel Summer', 'Shake It Off', 'You Need To Calm Down'].map(song => (
+            <span key={song} className="song-tag taylor-tag">{song}</span>
+          ))}
+        </div>
+        <a href="https://open.spotify.com/playlist/3e7GZGQAbu6NDcCwtjs3N4?si=LQeRsmdWS0Wg4L7I5oOoSg" target="_blank" rel="noopener noreferrer">
+          <button className="music-button taylor-button">Ouvir o Hino Pop</button>
+        </a>
+      </div>
+
+      {/* Seção Queen */}
       <div className="band-section queen-section">
         <h3>👑 Queen: Show dos Sonhos (Anos 80)</h3>
         <p>A era mais grandiosa. Pura energia de palco.</p>

@@ -50,6 +50,27 @@
   background-color: #800080; /* Roxo */
 }
 
+/* --- Estilo Taylor Swift (Mais Glitter/Pop) --- */
+.taylor-section {
+  /* Gradiente com tons de rosa/azul pastel, cores da era Lover */
+  background: linear-gradient(135deg, #FFB6C1, #ADD8E6); 
+  border: 2px solid #FF69B4; /* Borda rosa choque para energia */
+}
+.taylor-section h3 {
+  color: #800080; /* Roxo vibrante */
+}
+.taylor-tag {
+  background-color: #FF69B4; /* Rosa Choque */
+  color: white;
+}
+.taylor-button {
+  background-color: #800080; /* Roxo */
+  color: white;
+}
+.taylor-button:hover {
+  background-color: #A020F0;
+}
+
 /* --- Estilo Arctic Monkeys --- */
 .arctic-monkeys-section {
   background: linear-gradient(135deg, #36454F, #5C4033); /* Cinza ardósia / Marrom escuro */
@@ -91,4 +112,30 @@
 }
 .music-button:hover {
     transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .music-container {
+        padding: 10px;
+        margin: 20px auto;
+    }
+    .music-container h2 {
+        font-size: 1.8em;
+    }
+    .band-section {
+        padding: 20px;
+    }
+    .band-section h3 {
+        font-size: 1.4em;
+    }
+    .song-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .song-tag {
+        font-size: 0.8em;
+        padding: 4px 10px;
+    }
 }
