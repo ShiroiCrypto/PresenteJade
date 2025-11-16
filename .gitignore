@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Forçar inclusão de arquivos de áudio no src/assets
+!src/assets/*.mp3
