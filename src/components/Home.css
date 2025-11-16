@@ -1,0 +1,83 @@
+/* src/components/Home.css */
+
+/* --- Ambiente Forks/Floresta (Desligado) --- */
+.home-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Imagem de Fundo Escura (Você deve colocar uma imagem escura de floresta na pasta 'public') */
+  background-image: url('/forest_bg_dark.jpg'); 
+  background-size: cover;
+  background-position: center;
+  
+  /* Camada de Névoa/Escuridão - Fallback se a imagem não existir */
+  background-color: #0a0a0a;
+  background-blend-mode: darken;
+  
+  transition: all 1s ease-in-out;
+}
+
+.tesla-content {
+  position: relative;
+  text-align: center;
+  padding: 40px;
+  background-color: rgba(18, 18, 18, 0.8); /* Fundo escuro sutil */
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+/* --- Botão Tesla --- */
+.tesla-button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  border: 3px solid #B5A7C5; /* Cor Lavanda/Toque LGBTQIA+ */
+  background-color: transparent;
+  color: #B5A7C5;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.tesla-button:hover {
+  background-color: #B5A7C5;
+  color: #121212;
+  box-shadow: 0 0 15px #B5A7C5;
+}
+
+/* --- Efeito Tesla Ligada (A "Mágica") --- */
+
+/* Brilho na tela toda */
+.tesla-glow-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /* Brilho elétrico roxo-azulado */
+  box-shadow: 0 0 100px 50px rgba(179, 136, 235, 0.5) inset; 
+  /* Adiciona a animação de pulso */
+  animation: electricPulse 1.5s infinite alternate;
+  z-index: 5;
+}
+
+.tesla-button.active {
+  background-color: #E2BFFF; /* Rosa claro vibrante */
+  color: #121212;
+  border-color: #E2BFFF;
+  /* Animação sutil no botão ligado */
+  box-shadow: 0 0 20px #E2BFFF; 
+}
+
+/* Animação para simular o "crepitar" da eletricidade */
+@keyframes electricPulse {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
+}

@@ -1,0 +1,94 @@
+/* src/components/Music.css */
+
+.music-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  color: white;
+}
+
+.music-container h2 {
+  text-align: center;
+  color: #B5A7C5; /* Lavanda */
+  border-bottom: 3px solid #6D6A6A; /* Marrom/Cinza de fundo */
+  padding-bottom: 15px;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+}
+
+.music-intro {
+  text-align: center;
+  margin-bottom: 40px;
+  font-style: italic;
+  color: #aaa;
+}
+
+.band-section {
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.band-section h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+/* --- Estilo Queen --- */
+.queen-section {
+  background: linear-gradient(135deg, #4b0082, #800080); /* Roxo profundo */
+}
+.queen-section h3 {
+  color: gold;
+}
+.queen-tag {
+  background-color: #FFD700; /* Dourado */
+  color: #121212;
+}
+.queen-button {
+  background-color: #800080; /* Roxo */
+}
+
+/* --- Estilo Arctic Monkeys --- */
+.arctic-monkeys-section {
+  background: linear-gradient(135deg, #36454F, #5C4033); /* Cinza ardósia / Marrom escuro */
+}
+.arctic-monkeys-section h3 {
+  color: #D3D3D3; /* Cinza claro */
+}
+.monkeys-tag {
+  background-color: #36454F; /* Cinza escuro */
+  color: #D3D3D3;
+  border: 1px solid #D3D3D3;
+}
+.monkeys-button {
+  background-color: #5C4033; /* Marrom */
+  color: white;
+}
+
+/* Estilos Comuns */
+.song-list {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.song-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+.music-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: transform 0.2s;
+}
+.music-button:hover {
+    transform: translateY(-2px);
+}
