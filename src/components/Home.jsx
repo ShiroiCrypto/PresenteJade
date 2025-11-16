@@ -37,12 +37,12 @@ const Home = () => {
         if (errorMsg) {
           // Erro 4 = MEDIA_ERR_SRC_NOT_SUPPORTED ou arquivo não encontrado
           if (errorMsg.code === 4 || errorMsg.code === 1) {
-            setAudioError('Arquivo de áudio não encontrado. Para adicionar música, coloque um arquivo chamado "clair_de_lune.mp3" na pasta public/');
+            setAudioError('Arquivo de áudio não encontrado. Certifique-se de que "clair_de_lune.mp3" está em src/assets/');
           } else {
             setAudioError('Erro ao carregar áudio. Verifique o formato do arquivo.');
           }
         } else {
-          setAudioError('Arquivo de áudio não encontrado. Adicione clair_de_lune.mp3 na pasta public/');
+          setAudioError('Arquivo de áudio não encontrado. Adicione clair_de_lune.mp3 em src/assets/');
         }
         console.error('Erro ao carregar áudio:', errorMsg);
       };
