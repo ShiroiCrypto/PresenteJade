@@ -43,9 +43,7 @@ const Books = () => {
           <small>Onde o foco está na jornada interior.</small>
         </div>
 
-        <button className="book-button">
-          Ver Citações Favoritas
-        </button>
+        {/* Botão removido: função inexistente em produção (Discloud) */}
       </div>
       
     </div>
