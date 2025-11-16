@@ -1,6 +1,7 @@
 // src/components/Home.jsx
 import React, { useState, useEffect, useRef } from 'react';
 import './Home.css';
+import clairDeLuneAudio from '../assets/clair_de_lune.mp3';
 
 const Home = () => {
   // Estado para controlar se a Bobina de Tesla está ligada
@@ -100,7 +101,7 @@ const Home = () => {
       */}
       <audio 
         ref={audioRef} 
-        src="/clair_de_lune.mp3" 
+        src={clairDeLuneAudio} 
         loop 
         preload="metadata"
         aria-label="Música de fundo - Clair de Lune"
